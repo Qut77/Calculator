@@ -8,7 +8,7 @@
         <div class="card-body">
             <h3 class="card-title text-center mb-4">Калькулятор</h3>
 
-            <form>
+            <form method="POST" action ="{{ path('app_calc') }}">
                 <div class="mb-3">
                     <label class="form-label">Первое число</label>
                     <input type="number" class="form-control" name="number1">
@@ -33,7 +33,7 @@
             </form>
 
             <div class="mt-4 text-center fs-4">
-                Результат: <strong>—</strong>
+                Результат: <strong>{{ result ?? '—' }}</strong>
             </div>
         </div>
     </div>
